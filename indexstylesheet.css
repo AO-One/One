@@ -1,0 +1,141 @@
+:root {
+    --gold:#ffaa00;
+    --deep-space:#010105;
+    --glass:rgba(10, 10, 15, 0.9);
+    --cyan:#00ffff;
+
+}
+
+body, html {
+    margin:0;
+    padding:0;
+    background-color:var(--deep-space);
+    color:white;
+    font-family:'Courier New', Courier, monospace;
+    overflow-x:hidden;
+
+}
+
+/* Navbar */
+a {
+    text-decoration:none;
+    color:inherit;
+
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:black;
+    padding:15px 30px;
+
+}
+
+.nav-links {
+    display:flex;
+    list-style:none;
+    gap:20px;
+
+}
+
+.nav-links a {
+    color:white;
+    font-weight:500;
+    transition:color 0.3s;
+
+}
+
+.nav-links a:hover {
+    color:#00bcd4;
+
+}
+
+/* Animated Nebula Background */
+.nebula-bg {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:800px;
+    height:800px;
+    background:radial-gradient(circle, rgba(255,170,0,0.15) 0%, rgba(0,0,0,0) 70%);
+    filter:blur(80px);
+    z-index:-1;
+    animation:pulse 8s infinite ease-in-out;
+
+}
+
+@keyframes pulse {
+    0%, 100% { transform:translate(-50%, -50%) scale(1); opacity:0.5; }
+    50% { transform:translate(-50%, -50%) scale(1.2); opacity:0.8; }
+
+}
+
+.container {
+    max-width:900px;
+    margin:0 auto;
+    padding:100px 20px;
+    text-align:center;
+
+}
+
+h1 {
+    font-size:4rem;
+    letter-spacing:15px;
+    color:white;
+    margin-bottom:10px;
+
+}
+
+.subtitle {
+    color:var(--gold);
+    font-size:1.2rem;
+    letter-spacing:3px;
+    margin-bottom:50px;
+
+}
+
+.manifesto {
+    background:var(--glass);
+    border:1px solid #222;
+    padding:40px;
+    border-radius:15px;
+    line-height:1.8;
+    text-align:left;
+    margin-bottom:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+}
+
+.cta-box {
+    border-top:1px solid var(--gold);
+    padding-top:40px;
+
+}
+
+.webinar-btn {
+    background:var(--gold);
+    color:black;
+    padding:20px 40px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.1rem;
+    border-radius:5px;
+    display:inline-block;
+    transition:transform 0.3s;
+
+}
+
+.webinar-btn:hover {
+    transform:scale(1.05);
+    background:#ffcc00;
+
+}
+
+.footer {
+    margin-top:100px;
+    font-size:0.8rem;
+    color:#555;
+
+}
